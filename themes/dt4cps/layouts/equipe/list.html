@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+<ul>
+    {{ range .Site.Taxonomies.labs.Alphabetical }}
+      <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+    {{ end }}
+  </ul>
+
+<div class="row">
+    {{ range .Pages }}
+    <div class="col-sm-12 col-md-3">
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        <img class="img-fluid" style="height:200px" src="{{ .Params.image | relURL }}">
+    </div>
+    {{ end }}
+</div>
+{{ end }}
