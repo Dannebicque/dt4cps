@@ -1,11 +1,25 @@
-<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">{{ site.Title }}</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-      </div>
+<nav class="navbar fixed-top navbar-expand-lg bg-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">{{ site.Title }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <nav>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+        </ul>
+      </nav>
+      <span class="navbar-text">
+        <select class="language-list" onchange="window.location.href=this.value">
+          {{ range $.Site.Home.AllTranslations }}
+          <option value="{{ .Permalink }}" {{ if eq $.Site.Language.Lang .Lang }}selected{{ end }}>
+              {{ .Language.LanguageName }}
+          </option>
+          {{ end }}
+      </select>
+      </span>
     </div>
-  </nav>
+  </div>
+</nav>
