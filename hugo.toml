@@ -1,5 +1,5 @@
 title = "Projet ANR DT4CPS"
-baseURL = "https://projet-anr-dt4cps.netlify.app/"
+baseURL = "https://dt4cps.fr/"
 languageCode = "fr-fr"
 theme = "dt4cps"
 resourceDir = "./resources"
