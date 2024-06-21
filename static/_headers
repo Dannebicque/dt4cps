@@ -1,37 +1,12 @@
-[[redirects]]
-    from = "/index.html"
-    to = "/fr/index.html"
-    status = 200
-    force = true
-    conditions = { Language = "fr" }
+# 200! --> 200 means rewrite instead of redirect, ! means overwrite the Hugo generated index.html alias
+# EN language rewrites
+/index.html /en/index.html  200! Language=en
+/           /en/index.html  200! Language=en
 
-[[redirects]]
-    from = "/"
-    to = "/fr/index.html"
-    status = 200
-    force = true
-    conditions = { Language = "fr" }
+# NL language rewrites
+/index.html /fr/index.html  200! Language=fr
+/           /fr/index.html  200! Language=fr
 
-[[redirects]]
-    from = "/index.html"
-    to = "/en/index.html"
-    status = 200
-    force = true
-    conditions = { Language = "en" }
-
-[[redirects]]
-    from = "/"
-    to = "/en/index.html"
-    status = 200
-    force = true
-    conditions = { Language = "en" }
-
-[[redirects]]
-    from = "/index.html"
-    to = "/fr/index.html"
-    status = 200
-
-[[redirects]]
-    from = "/"
-    to = "/fr/index.html"
-    status = 200
+# Other language rewrites
+/index.html /fr/index.html  200!
+/           /fr/index.html  200!
