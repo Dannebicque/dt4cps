@@ -1,12 +1,12 @@
 title = "Projet ANR DT4CPS"
 baseURL = "https://dt4cps.fr/"
-languageCode = "fr"
+#languageCode = "fr"
 theme = "dt4cps"
 resourceDir = "./resources"
 
 defaultContentLanguage = "fr"
 defaultContentLanguageInSubdir = true
-SectionPagesMenu = "main"
+sectionPagesMenu = "main"
 Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
 enableRobotsTXT = true
 
@@ -19,12 +19,12 @@ enableRobotsTXT = true
     title = "Project ANR DT4CPS"
     weight = 2
     contentDir = "content/en"
-    LanguageName = "English"
+    languageName = "English"
   [languages.fr]
     title = "Projet ANR DT4CPS"
     weight = 1
     contentDir = "content/fr"
-    LanguageName = "Français"
+    languageName = "Français"
 
 [sitemap]
   changefreq = "monthly"
@@ -45,7 +45,7 @@ enableRobotsTXT = true
 name = "twitter"
 url = "https://twitter.com/GoHugoIO"
 
- [module]
-    [[module.mounts]]
-      source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-      target = "assets/js/bootstrap.bundle.min.js"
+[module]
+  [[module.mounts]]
+    source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    target = "assets/js/bootstrap.bundle.min.js"
