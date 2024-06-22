@@ -1,7 +1,6 @@
 +++
 title = 'Lancement Projet'
 date = 2024-05-31T12:55:23+02:00
-draft = true
 +++
 
 Bien que la notion de CPS (Cyber-Physical Systems) soit apparue en 2006 dans [1] avec les travaux de la National Science Foundation (NSF) américaine, c’est très souvent la définition de [2] qui est retenue. En effet, celle-ci intègre le fait que les CPS sont des systèmes composés d’entités autonomes et collaboratives dotées de capacité de calcul permettant d’interagir avec le monde physique et rendant les données disponibles sur le réseau. Dans le cadre de cette définition, l’auteur y défini différentes caractéristiques dont le fait qu’un CPS soit (i) adapté à des échelles temporelles et spatiales multiples, (ii) fortement automatisé et connecté, et surtout (iii) capable de se reconfigurer dynamiquement suite à une défaillance ou une demande de changement fonctionnel de production. C’est dans ce dernier cadre que le projet DT4CPS souhaite s’inscrire. Cependant, afin de pouvoir évaluer les capacités de reconfiguration d’un CPS et les conséquences de celle-ci, nous souhaitons nous appuyer sur l’exploitation d’un jumeau numérique d’un CPS afin d’en exploiter ses atouts de simulation.
