@@ -1,6 +1,6 @@
 title = "Projet ANR DT4CPS"
 baseURL = "https://dt4cps.fr/"
-languageCode = "fr-fr"
+languageCode = "FR-fr"
 theme = "dt4cps"
 resourceDir = "./resources"
 
