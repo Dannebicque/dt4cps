@@ -14,8 +14,10 @@
     <div class="card">
       <h2 class="card-header"><a href="{{ .RelPermalink }}" class="text-primary">{{ .LinkTitle }}</a></h2>
       <div class="card-body">
-      <img class="img-fluid" style="height:300px" src="{{ .Params.image | relURL }}">
-    </div>
+        <div class="text-center">
+          <img class="img-fluid" style="height:300px" src="{{ .Params.image | relURL }}">
+        </div>
+      </div>
     </div>
   </div>
   {{ end }}
