@@ -13,8 +13,8 @@
       </nav>
       <span class="navbar-text">
         <select class="language-list" onchange="window.location.href=this.value">
-          {{ range $.Site.Home.AllTranslations }}
-          <option value="{{ .Permalink }}" {{ if eq $.Site.Language.Lang .Lang }}selected{{ end }}>
+          {{ range site.Home.AllTranslations }}
+          <option value="{{ .Permalink }}" {{ if eq site.Language.Lang .Lang }}selected{{ end }}>
               {{ .Language.LanguageName }}
           </option>
           {{ end }}
