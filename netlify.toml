@@ -1,13 +1,11 @@
 [[redirects]]
     from = "/"
     to = "/fr/"
-    status = 200
     force = true
-    conditions = { Language = "fr" }
+    conditions = { Language = ["fr"] }
 
 [[redirects]]
     from = "/"
     to = "/en/"
-    status = 200
     force = true
-    conditions = { Language = "en" }
+    conditions = { Language = ["en"] }

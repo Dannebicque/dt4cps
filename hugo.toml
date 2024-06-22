@@ -4,7 +4,7 @@ languageCode = "fr"
 theme = "dt4cps"
 resourceDir = "./resources"
 
-DefaultContentLanguage = "fr"
+defaultContentLanguage = "fr"
 SectionPagesMenu = "main"
 Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
 enableRobotsTXT = true
