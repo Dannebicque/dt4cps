@@ -1,8 +1,6 @@
-+++
-title = 'Lancement Projet'
-date = 2024-05-31T12:55:23+02:00
-draft = true
-+++
+---
+title: "Lancement Projet"
+---
 
 Although the concept of Cyber-Physical Systems (CPS) appeared in 2006 in [1] with the work of the American National Science Foundation (NSF), it is often the definition from [2] that is retained. Indeed, this definition integrates the fact that CPS are systems composed of autonomous and collaborative entities with computing capabilities that interact with the physical world and make data available on the network. Within this definition, the author defines various characteristics, including the fact that a CPS is (i) adapted to multiple temporal and spatial scales, (ii) highly automated and connected, and most importantly (iii) capable of dynamically reconfiguring itself following a failure or a functional production change request. It is within this context that the DT4CPS project aims to operate. However, in order to evaluate the reconfiguration capabilities of a CPS and the consequences thereof, we wish to rely on the exploitation of a digital twin of a CPS in order to leverage its simulation advantages.r sur l’exploitation d’un jumeau numérique d’un CPS afin d’en exploiter ses atouts de simulation.
 

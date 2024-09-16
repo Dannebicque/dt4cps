@@ -19,9 +19,11 @@ enableRobotsTXT = true
     title = "Project ANR DT4CPS"
     weight = 2
     contentDir = "content/en"
+    languageCode = "en"
     languageName = "English"
   [languages.fr]
     title = "Projet ANR DT4CPS"
+    languageCode = "fr"
     weight = 1
     contentDir = "content/fr"
     languageName = "Français"
