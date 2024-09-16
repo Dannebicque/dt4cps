@@ -1,11 +1,11 @@
 ---
-title: "Patrice Leclaire"
-image: "/images/membres/quartz_patrice_leclaire.jpg"
-status: "Professeur des universités"
-email: "patrice.leclaire@isae-supmeca.fr"
+title: "Mariem Besbes"
+image: "/images/membres/mbesbes.jpg"
+status: "Maître de Conférences"
+email: "mariem.besbes@isae-supmeca.fr"
 labs: ['QUARTZ']
-role: 'Resp. scientifique WP2'
-wps: ['WP1','WP2','WP3','WP4']
+role: '-'
+wps: ['WP3', 'WP4']
 social:
   - icon : "ti-facebook" # themify icon pack : https://themify.me/themify-icons
     link : "#"

@@ -1,11 +1,11 @@
 ---
-title: "Patrice Leclaire"
-image: "/images/membres/quartz_patrice_leclaire.jpg"
-status: "Professeur des universités"
-email: "patrice.leclaire@isae-supmeca.fr"
+title: "Sid-Ali Addouche"
+image: "/images/membres/no_photo.png"
+status: "Maître de Conférences"
+email: " s.addouche@iut.univ-paris8.fr"
 labs: ['QUARTZ']
-role: 'Resp. scientifique WP2'
-wps: ['WP1','WP2','WP3','WP4']
+role: '-'
+wps: ['WP2', 'WP3']
 social:
   - icon : "ti-facebook" # themify icon pack : https://themify.me/themify-icons
     link : "#"

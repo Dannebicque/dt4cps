@@ -9,13 +9,16 @@
 </ul>
 
 <div class="row">
-  {{ range .Pages }}
+  {{ range $k, $v := .Pages }}
   <div class="col-sm-12 col-md-4 gy-3">
     <div class="card">
       <h2 class="card-header"><a href="{{ .RelPermalink }}" class="text-primary">{{ .LinkTitle }}</a></h2>
       <div class="card-body">
         <div class="text-center">
           <img class="img-fluid" style="height:300px" src="{{ .Params.image | relURL }}">
+          <p>{{ range $lab := .Params.labs }}{{ $lab }}{{ end }}</p>
+          <p>{{ range $wp := .Params.wps }}{{ $wp }}, {{ end }}</p>
+          <p>{{ .Params.role }}</p>
         </div>
       </div>
     </div>

@@ -1,11 +1,11 @@
 ---
-title: "Patrice Leclaire"
-image: "/images/membres/quartz_patrice_leclaire.jpg"
+title: "Fabien Emprin"
+image: "/images/membres/fabien-emprin.jpg"
 status: "Professeur des universités"
-email: "patrice.leclaire@isae-supmeca.fr"
-labs: ['QUARTZ']
-role: 'Resp. scientifique WP2'
-wps: ['WP1','WP2','WP3','WP4']
+email: "fabien.emprin@univ-reims.fr"
+role: "-"
+wps: ['WP1', 'WP4']
+labs: ['CReSTIC']
 social:
   - icon : "ti-facebook" # themify icon pack : https://themify.me/themify-icons
     link : "#"
@@ -15,4 +15,4 @@ social:
     link : "#"
 ---
 
-... A venir ...
+
