@@ -5,7 +5,7 @@ status: "Professeur des universités"
 email: "pierre-alain.yvars@insa-lyon.fr"
 labs: ['QUARTZ']
 role: '-'
-wps: ['WP1']
+wps: ['WP3']
 ---
 
 ... A venir ...
