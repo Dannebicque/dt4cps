@@ -2,7 +2,7 @@
 title: "Bernard Riera"
 labs: ['CReSTIC']
 role: "Resp. scientifique WP3"
-wps: ['WP3']
+wps: ['WP0','WP3']
 params:
   image: "/images/membres/bernard.jpg"
   status: "Professeur des universités"

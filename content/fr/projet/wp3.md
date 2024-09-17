@@ -1,8 +1,7 @@
-+++
-title = 'Work package 3 : Méthodes et outils pour la commande et la reconfiguration'
-date = 2024-05-31T12:56:22+02:00
-responsable="B. Riera"
-+++
+---
+title: "Work package 3 : Méthodes et outils pour la commande et la reconfiguration"
+responsable: "B. Riera"
+---
 
 ## Objectifs
 
