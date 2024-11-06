@@ -2,15 +2,10 @@
 title: "Patrice Leclaire"
 image: "/images/membres/quartz_patrice_leclaire.jpg"
 status: "Professeur des universités"
-email: "patrice@mail.com"
+email: "patrice.leclaire@isae-supmeca.fr"
 labs: ['QUARTZ']
-social:
-  - icon : "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-    link : "#"
-  - icon : "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
-    link : "#"
-  - icon : "ti-github" # themify icon pack : https://themify.me/themify-icons
-    link : "#"
+role: 'Resp. scientifique WP2'
+wps: ['WP1','WP2','WP3','WP4']
 ---
 
-... a mettre ...
+... A venir ...

@@ -6,8 +6,8 @@ Although the concept of Cyber-Physical Systems (CPS) appeared in 2006 in [1] wit
 
 We limit the scope of our work to Reconfigurable Manufacturing Systems (RMS) as a type of Cyber-Physical Production System (CPPS). Therefore, the chosen definition of the Digital Twin will correspond to the vision of automation engineers and production specialists. Indeed, there are multiple definitions of a Digital Twin depending on the use cases and the associated value creation. In this regard, the AIF (Alliance Industrie du Futur) recently published a report on the Digital Twin and its "Major Lever for the Digital Transformation of Industry" [1]. It defines the Digital Twin as:
 
- * an organized set of digital models representing a real-world entity to address specific issues and use cases,
- * updated in relation to reality, at a frequency and precision adapted to its issues and use cases,
- * equipped with advanced exploitation tools to understand, analyze, predict, and optimize the operation and control of the real entity.
+* an organized set of digital models representing a real-world entity to address specific issues and use cases,
+* updated in relation to reality, at a frequency and precision adapted to its issues and use cases,
+* equipped with advanced exploitation tools to understand, analyze, predict, and optimize the operation and control of the real entity.
 
-[1] http://www.industrie-dufutur.org/content/uploads/2023/03/AIF_JumeauNumerique.pdf
+[1] [http://www.industrie-dufutur.org/content/uploads/2023/03/AIF_JumeauNumerique.pdf](http://www.industrie-dufutur.org/content/uploads/2023/03/AIF_JumeauNumerique.pdf)

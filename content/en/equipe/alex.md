@@ -1,17 +1,13 @@
 ---
 title: "Alexandre Philippot"
 image: "/images/membres/alex.jpg"
-status: "Professeur des universités"
+status: "Professor"
 email: "alexandre.philippot@univ-reims.fr"
+role: "Coordinator and Scientific Manager WP0"
+wps: ['WP0', 'WP1', 'WP2', 'WP3', 'WP4']
 labs: ['CReSTIC']
-social:
-  - icon : "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-    link : "#"
-  - icon : "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
-    link : "#"
-  - icon : "ti-github" # themify icon pack : https://themify.me/themify-icons
-    link : "#"
 ---
 
-Coordinator and Scientific Responsible WP0
+Coordinator and Scientific Manager WP0
 Participant WP1, WP2, WP3, WP4
+

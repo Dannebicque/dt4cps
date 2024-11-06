@@ -1,8 +1,7 @@
-+++
-title = 'Work package 2 : Garantir l’alignement des jumeaux '
-date = 2024-05-31T12:56:19+02:00
-responsable = "P. Leclaire"
-+++
+---
+title: "Work package 2: Ensuring Digital Twin Alignment"
+responsable: "P. Leclaire"
+---
 
 ## Objectives
 

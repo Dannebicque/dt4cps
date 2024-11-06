@@ -6,13 +6,6 @@ email: "patrice.leclaire@isae-supmeca.fr"
 labs: ['QUARTZ']
 role: 'Resp. scientifique WP2'
 wps: ['WP1','WP2','WP3','WP4']
-social:
-  - icon : "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-    link : "#"
-  - icon : "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
-    link : "#"
-  - icon : "ti-github" # themify icon pack : https://themify.me/themify-icons
-    link : "#"
 ---
 
 ... A venir ...

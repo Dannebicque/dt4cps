@@ -1,8 +1,7 @@
-+++
-title = 'Work Package 1 : Méthodologie pour la mise en place d’un JN multi-échelles'
-date = 2024-05-31T12:56:16+02:00
-responsable = 'S. Henry'
-+++
+---
+title: "Work Package 1: Methodology for Implementing a Multi-Scale Digital Twin"
+responsible: "S. Henry"
+---
 
 ## Objectives
 

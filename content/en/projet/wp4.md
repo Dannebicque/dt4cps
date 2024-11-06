@@ -1,8 +1,7 @@
-+++
-title = 'Work Package 4 : Cas d’usage, démonstrateur et expérimentations'
-date = 2024-05-31T12:56:16+02:00
-responsable = 'F. Gellot'
-+++
+---
+title: "Work Package 4: Use Cases, Demonstrator, and Experiments"
+responsable: "F. Gellot"
+---
 
 ## Objectives
 

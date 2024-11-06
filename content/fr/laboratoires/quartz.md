@@ -1,7 +1,6 @@
-+++
-title = 'Quartz'
-date = 2024-05-31T12:56:01+02:00
-+++
+---
+title: "Quartz"
+---
 
 {{< figure src="/images/logos/logoquartz.png" alt="Quartz" height="150px" >}}
 
