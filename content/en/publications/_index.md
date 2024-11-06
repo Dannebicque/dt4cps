@@ -1,5 +1,5 @@
 ---
-title: "Publications scientifiques"
+title: "Scientific Publications"
 weight: 5
 ---
 
