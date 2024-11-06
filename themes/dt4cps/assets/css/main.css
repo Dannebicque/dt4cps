@@ -130,3 +130,22 @@
 .text-light {
     color: #F4F0BB;
 }
+
+time {
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+.content {
+    margin-top: 2rem;
+}
+
+.post {
+    margin-bottom: 2rem;
+}
+
+.logo-lab {
+    height: 150px;
+    text-align: center;
+    margin: auto;
+}

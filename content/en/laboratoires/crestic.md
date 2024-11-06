@@ -1,5 +1,7 @@
 ---
 title: "Crestic"
+website: "https://crestic.univ-reims.fr"
+logo: "/images/logos/logocrestic.png"
 ---
 
 {{< figure src="/images/logos/logocrestic.png" alt="ANR" height="150px" >}}

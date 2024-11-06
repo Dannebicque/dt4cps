@@ -1,0 +1,29 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ range .Pages.ByTitle }}
+<div class="post">
+  <div class="row">
+    <div class="col-3 text-center">
+      <a href="{{ .RelPermalink }}">
+        <img src="{{ .Params.logo }}" alt="{{ .LinkTitle }}" class="img-fluid logo-lab">
+      </a>
+    </div>
+    <div class="col-9">
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      {{ if .Date }}
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .Date | time.Format ":date_long" }}
+      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+      {{ end }}
+      <p>{{ .Summary }}</p>
+      {{ if eq .Site.Language.Lang "fr" }}
+      <p>Accéder au site du laboratoire : <a href="{{ .Params.website }}" target="_blank">{{ .Params.website }}</a></p>
+      {{ else }}
+      <p>Visit the laboratory website: <a href="{{ .Params.website }}" target="_blank">{{ .Params.website }}</a></p>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ end }}
