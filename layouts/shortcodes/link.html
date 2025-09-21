@@ -1,0 +1,4 @@
+{{ $url := .Get 0 }}
+{{ $text := .Get 1 }}
+{{ $target := .Get 2 | default "_self" }}
+<a href="{{ $url }}" target="{{ $target }}">{{ $text }}</a>
