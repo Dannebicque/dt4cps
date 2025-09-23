@@ -17,10 +17,18 @@ Pour cela nous nous appuierons grandement la plateforme CellFlex4.0 de l’Unive
 
 Nous retrouverons ici certains livrables du WP4, notamment ceux concernant les scénarios cadrés autour de la plateforme, mais aussi les données issues de celle-ci en Open Access.
 
-* Bouchons S7 API Réel (Cellflex-CResTIC)
+* Station de bouchonnage : Description et configuration de la station de bouchonnage Cellflex 4.0 (pdf)
+
+[Télécharger le fichier](/benchmark/Station Bouchonnage-Description et Configuration.pdf)
+
+* Maquette bouchonnage Cellflex 4.0 (xlsx)
+
+[Télécharger le fichier](/benchmark/maquette_bouchon.xlsx)
+
+* Bouchons S7 API Réel Cellflex 4.0 (csv) 
 
 [Télécharger le fichier](/benchmark/donnees_10_Bouchons_s7_API_Reel.csv)
 
-* Bouchons S7 API Simulé (Cellflex-CResTIC)
+* Bouchons S7 API Simulé Cellflex 4.0 (csv)
 
 [Télécharger le fichier](/benchmark/donnees_10_Bouchons_s7_API_Simu.csv)
