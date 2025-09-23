@@ -21,9 +21,11 @@ Nous retrouverons ici certains livrables du WP4, notamment ceux concernant les s
 
 {{< youtube fDNQKsev1vw >}}
 
+
 * Vidéo de la plateforme Cellflex 4.0 (version JN)
 
 {{< youtube mkrNdcQW4ZI >}}
+
 
 * Station de bouchonnage : Description et configuration de la station de bouchonnage Cellflex 4.0 (pdf)
 
