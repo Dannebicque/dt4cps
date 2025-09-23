@@ -19,7 +19,7 @@ Nous retrouverons ici certains livrables du WP4, notamment ceux concernant les s
 
 * Station de bouchonnage : Description et configuration de la station de bouchonnage Cellflex 4.0 (pdf)
 
-[Télécharger le fichier](/benchmark/Station Bouchonnage-Description et Configuration.pdf)
+[Télécharger le fichier](/benchmark/Station-Bouchonnage-Description-et-Configuration.pdf)
 
 * Maquette bouchonnage Cellflex 4.0 (xlsx)
 
