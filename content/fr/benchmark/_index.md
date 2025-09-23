@@ -17,6 +17,14 @@ Pour cela nous nous appuierons grandement la plateforme CellFlex4.0 de l’Unive
 
 Nous retrouverons ici certains livrables du WP4, notamment ceux concernant les scénarios cadrés autour de la plateforme, mais aussi les données issues de celle-ci en Open Access.
 
+* Vidéo de la plateforme Cellflex 4.0
+
+{{< youtube fDNQKsev1vw >}}
+
+* Vidéo de la plateforme Cellflex 4.0 (version JN)
+
+{{< youtube mkrNdcQW4ZI >}}
+
 * Station de bouchonnage : Description et configuration de la station de bouchonnage Cellflex 4.0 (pdf)
 
 [Télécharger le fichier](/benchmark/Station-Bouchonnage-Description-et-Configuration.pdf)
