@@ -31,7 +31,7 @@ Nous retrouverons ici certains livrables du WP4, notamment ceux concernant les s
 
 [Télécharger le fichier](/benchmark/Station-Bouchonnage-Description-et-Configuration.pdf)
 
-* Maquette bouchonnage Cellflex 4.0 (xlsx)
+* Bilan des entrées/sorties maquette bouchonnage (xlsx)
 
 [Télécharger le fichier](/benchmark/maquette_bouchon.xlsx)
 
