@@ -13,3 +13,4 @@ weight: 7
 * {{< link "/pdf/05%20Suite%20-%20Methodo%20analyse%20Usages.pdf" "Methodo analyse Usages" "_blank" >}}
 * {{< link "/pdf/06%20Réunion%20ANR%20DT4CPS%2006%20fev%202025.pdf" "Réunion ANR DT4CPS 06 fev 2025" "_blank" >}}
 * {{< link "/pdf/07%20Réunion%20ANR%20DT4CPS%2004%20juin%202025.pdf" "Réunion ANR DT4CPS 04 juin 2025" "_blank" >}}
+* {{< link "/pdf/08%20Réunion%20ANR%20DT4CPS%2025%20septembre%202025.pdf" "Réunion ANR DT4CPS 25 septembre 2025" "_blank" >}}
