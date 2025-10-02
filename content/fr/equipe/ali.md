@@ -1,6 +1,6 @@
 ---
 title: "Ali Bdeir"
-image: "/images/membres/no_photo.png"
+image: "/images/membres/ali.jpg"
 status: "Doctorant"
 email: "ali.bdeir@isae-supmeca.fr"
 role: "Doctorant QUARTZ - DISP"
