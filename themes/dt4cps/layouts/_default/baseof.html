@@ -7,11 +7,9 @@
   <header>
     {{ partial "header.html" . }}
   </header>
-  <main class="container" style="margin-top:80px;">
+  <main class="container" style="margin-top: 120px; min-height: 75vh;">
     {{ block "main" . }}{{ end }}
   </main>
-  <footer>
-    {{ partial "footer.html" . }}
-  </footer>
+  {{ partial "footer.html" . }}
 </body>
 </html>

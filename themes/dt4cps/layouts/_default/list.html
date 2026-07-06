@@ -1,16 +1,62 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ .Content }}
-{{ range .Pages.ByTitle }}
-<div class="post">
-  <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-  {{ if .Date }}
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-  {{ end }}
-  <p>{{ .Summary }}</p>
-  
+<div class="row mb-5">
+  <div class="col-12">
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+    <div class="lead text-muted mb-4">{{ .Content }}</div>
+    {{ end }}
+  </div>
 </div>
-{{ end }}
+
+<div class="row g-4">
+  {{ range .Pages.ByTitle }}
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 border-0 shadow-sm rounded-3">
+      <div class="card-body d-flex flex-column justify-content-between p-4">
+        <div>
+          {{ if .Date }}
+          {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+          {{ $dateHuman := .Date | time.Format ":date_medium" }}
+          <time datetime="{{ $dateMachine }}" class="text-muted small mb-2 d-block">
+            {{ $dateHuman }}
+          </time>
+          {{ end }}
+          
+          <h2 class="h5 fw-bold mb-3">
+            <a href="{{ .RelPermalink }}" class="text-dark text-decoration-none hover-primary">
+              {{ .LinkTitle }}
+            </a>
+          </h2>
+          
+          {{ if .Params.responsable }}
+          <p class="text-muted small mb-2">
+            <strong>{{ if eq $.Site.Language.Lang "fr" }}Responsable :{{ else }}Lead:{{ end }}</strong> {{ .Params.responsable }}
+          </p>
+          {{ end }}
+          
+          <p class="card-text text-muted small">
+            {{ .Summary | truncate 180 }}
+          </p>
+        </div>
+        
+        <div class="mt-4">
+          <a href="{{ .RelPermalink }}" class="text-primary fw-semibold small text-decoration-none d-inline-flex align-items-center">
+            {{ i18n "read_more" }} <span class="ms-1">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ else }}
+  <div class="col-12 text-center py-5">
+    <p class="text-muted">{{ if eq site.Language.Lang "fr" }}Aucun contenu disponible pour le moment.{{ else }}No content available at this time.{{ end }}</p>
+  </div>
+  {{ end }}
+</div>
+
+<style>
+  .hover-primary:hover {
+    color: #226f54 !important;
+  }
+</style>
 {{ end }}

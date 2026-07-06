@@ -1,40 +1,107 @@
 {{ define "main" }}
+<div class="row mb-4">
+  <div class="col-lg-10 mx-auto">
+    <!-- Back to labs link -->
+    <a href="{{ relLangURL `/laboratoires/` }}" class="text-primary text-decoration-none small fw-semibold">
+      ← {{ if eq .Site.Language.Lang "fr" }}Retour aux laboratoires{{ else }}Back to laboratories{{ end }}
+    </a>
+  </div>
+</div>
 
-<section class="section section-bg">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-10 mx-auto">
-				<div class="title text-center">
-					<h2>{{ with i18n "aboutAuthor" }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
-							{{ with i18n "aboutAuthor" }} {{ index (split . " ") 1 | safeHTML }} {{ end }} </span></h2>
-					<div class="border-meghna"></div>
-				</div>
-				<div class="content text-center">
-					<figure>
-						{{ if .Params.image }}
-						<img class="rounded-circle img-fluid lozad" style="height:250px" src="{{ .Params.image | relURL }}">
-						{{else if .Params.email}}
-						<img class="rounded-circle img-fluid lozad"
-							src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=128&pg&d=identicon">
-						{{ end }}
-						<figcaption>
-							<h5 class="font-weight-bold">
-								{{ .Title }}
-							</h5>
-						</figcaption>
-					</figure>
-					<hr>
-					{{ .Content }}
-					<hr>
-					<ul class="list-inline">
-						{{ range .Params.Social }}
-						<li class="list-inline-item"><a class="simple-icon" href="{{ .link | safeURL}}"><i
-									class="{{ .icon }}"></i></a></li>
-						{{ end }}
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<div class="row">
+  <div class="col-lg-10 mx-auto">
+    <div class="row gy-4 mb-5">
+      <!-- Lab Card Info (Left) -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 text-center">
+          <div class="d-flex align-items-center justify-content-center p-3 bg-light rounded-3 mb-4" style="height: 120px;">
+            {{ if .Params.logo }}
+            <img src="{{ .Params.logo }}" alt="{{ .Title }}" class="img-fluid logo-lab m-0">
+            {{ else }}
+            <span class="text-muted fw-semibold">{{ .Title }}</span>
+            {{ end }}
+          </div>
+          
+          <h2 class="h4 fw-bold text-dark mb-3">{{ .Title }}</h2>
+          
+          {{ if .Params.website }}
+          <a href="{{ .Params.website }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm rounded-pill w-100 py-2 mb-2 text-white">
+            {{ if eq .Site.Language.Lang "fr" }}Visiter le site web{{ else }}Visit Website{{ end }}
+          </a>
+          {{ end }}
+        </div>
+      </div>
+      
+      <!-- Lab Presentation (Right) -->
+      <div class="col-md-8">
+        <div class="card border-0 shadow-sm rounded-4 p-4">
+          <h3 class="h4 fw-bold text-primary mb-4 pb-2 border-bottom">
+            {{ if eq .Site.Language.Lang "fr" }}Présentation{{ else }}Overview{{ end }}
+          </h3>
+          
+          <div class="content lh-lg text-dark mt-0">
+            {{ if .Content }}
+              {{ .Content }}
+            {{ else }}
+              <p class="text-muted italic">
+                {{ if eq .Site.Language.Lang "fr" }}Aucune présentation disponible.{{ else }}No description available.{{ end }}
+              </p>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Affiliated Members Section -->
+    <div class="row my-5">
+      <div class="col-12">
+        <h3 class="h4 fw-bold text-primary mb-4">
+          {{ if eq .Site.Language.Lang "fr" }}Membres de l'équipe affiliés{{ else }}Affiliated Team Members{{ end }}
+        </h3>
+        
+        {{ $labTitle := .Title }}
+        {{ $members := slice }}
+        {{ range (where site.RegularPages "Section" "equipe") }}
+          {{ if .Params.labs }}
+            {{ if in .Params.labs $labTitle }}
+              {{ $members = $members | append . }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        
+        {{ if gt (len $members) 0 }}
+        <div class="row g-4">
+          {{ range $members }}
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100 text-center border-0 shadow-sm rounded-4 p-3 member-card">
+              <div class="mb-2">
+                {{ if .Params.image }}
+                <img class="rounded-circle member-avatar" src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="width: 100px; height: 100px;">
+                {{ else if .Params.email }}
+                <img class="rounded-circle member-avatar" src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=100&d=identicon" alt="{{ .Title }}" style="width: 100px; height: 100px;">
+                {{ else }}
+                <img class="rounded-circle member-avatar" src="/images/membres/no_photo.png" alt="{{ .Title }}" style="width: 100px; height: 100px;">
+                {{ end }}
+              </div>
+              <h4 class="h6 fw-bold mb-1 mt-2">
+                <a href="{{ .RelPermalink }}" class="text-dark text-decoration-none hover-primary">
+                  {{ .Title }}
+                </a>
+              </h4>
+              {{ if .Params.role }}
+              <p class="text-muted small mb-0">{{ .Params.role }}</p>
+              {{ end }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+        {{ else }}
+        <p class="text-muted italic">
+          {{ if eq .Site.Language.Lang "fr" }}Aucun membre trouvé pour ce laboratoire.{{ else }}No members found for this laboratory.{{ end }}
+        </p>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
 {{ end }}

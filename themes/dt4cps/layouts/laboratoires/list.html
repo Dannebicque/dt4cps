@@ -1,29 +1,50 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ .Content }}
-{{ range .Pages.ByTitle }}
-<div class="post">
-  <div class="row">
-    <div class="col-3 text-center">
-      <a href="{{ .RelPermalink }}">
-        <img src="{{ .Params.logo }}" alt="{{ .LinkTitle }}" class="img-fluid logo-lab">
-      </a>
-    </div>
-    <div class="col-9">
-      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      {{ if .Date }}
-      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-      {{ $dateHuman := .Date | time.Format ":date_long" }}
-      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-      {{ end }}
-      <p>{{ .Summary }}</p>
-      {{ if eq .Site.Language.Lang "fr" }}
-      <p>Accéder au site du laboratoire : <a href="{{ .Params.website }}" target="_blank">{{ .Params.website }}</a></p>
-      {{ else }}
-      <p>Visit the laboratory website: <a href="{{ .Params.website }}" target="_blank">{{ .Params.website }}</a></p>
-      {{ end }}
-    </div>
+<div class="row mb-5">
+  <div class="col-12">
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+    <div class="lead text-muted mb-4">{{ .Content }}</div>
+    {{ end }}
   </div>
 </div>
-{{ end }}
+
+<div class="row g-4">
+  {{ range .Pages.ByTitle }}
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center d-flex flex-column justify-content-between">
+      <div>
+        <div class="d-flex align-items-center justify-content-center p-3 bg-light rounded-3 mb-4" style="height: 120px;">
+          {{ if .Params.logo }}
+          <img src="{{ .Params.logo }}" alt="{{ .LinkTitle }}" class="img-fluid logo-lab m-0">
+          {{ else }}
+          <span class="text-muted fw-semibold">{{ .Title }}</span>
+          {{ end }}
+        </div>
+        
+        <h3 class="h5 fw-bold mb-3">
+          <a href="{{ .RelPermalink }}" class="text-dark text-decoration-none hover-primary">
+            {{ .LinkTitle }}
+          </a>
+        </h3>
+        
+        <p class="text-muted small mb-4">
+          {{ .Summary | truncate 150 }}
+        </p>
+      </div>
+      
+      <div class="d-flex flex-column gap-2 mt-auto">
+        <a href="{{ .RelPermalink }}" class="btn btn-outline-primary btn-sm rounded-pill py-2 w-100">
+          {{ if eq $.Site.Language.Lang "fr" }}Voir la présentation & l'équipe{{ else }}View info & team{{ end }}
+        </a>
+        
+        {{ if .Params.website }}
+        <a href="{{ .Params.website }}" target="_blank" rel="noopener" class="btn btn-link btn-sm text-decoration-none text-muted small py-1">
+          {{ if eq $.Site.Language.Lang "fr" }}Visiter le site officiel →{{ else }}Official Website →{{ end }}
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>
 {{ end }}

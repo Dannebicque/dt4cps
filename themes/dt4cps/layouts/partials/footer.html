@@ -1,36 +1,54 @@
-<div class="container">
-    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-      <div class="col mb-3">
-        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-            <img src="/images/logos/anr.jpg" alt="ANR" class="img-fluid" style="height:50px">
+<footer class="footer py-5 mt-5">
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Col 1: ANR Logo & Copyrights -->
+      <div class="col-md-5">
+        <a href="{{ relLangURL `/` }}" class="d-flex align-items-center mb-3 text-decoration-none">
+          <img src="/images/logos/anr.jpg" alt="ANR Logo" class="img-fluid footer-logo rounded me-3" style="max-height: 60px;">
+          <span class="fs-5 fw-bold text-primary">ANR DT4CPS</span>
         </a>
-        <p class="text-body-secondary">© 
-          {{ i18n "droits" }}
+        <p class="text-muted small">
+          © {{ i18n "droits" }}
         </p>
       </div>
-  
-      <div class="col mb-3">
-        <h5>{{ i18n "laboratories" }}</h5>
-        <img src="/images/logos/logocrestic.png" alt="ANR" class="img-fluid" style="height:50px">
-        <img src="/images/logos/logodisp.png" alt="DISP" class="img-fluid" style="height:50px">
-        <img src="/images/logos/logoquartz.png" alt="QUARTZ" class="img-fluid" style="height:50px">
+
+      <!-- Col 2: Partners & Laboratories -->
+      <div class="col-md-4">
+        <h5 class="text-uppercase small tracking-wider mb-3">{{ i18n "partners" }} / {{ i18n "laboratories" }}</h5>
+        <div class="d-flex flex-wrap gap-3 align-items-center">
+          <img src="/images/logos/logocrestic.png" alt="CReSTIC Logo" class="img-fluid footer-logo" style="height: 45px;">
+          <img src="/images/logos/logodisp.png" alt="DISP Logo" class="img-fluid footer-logo" style="height: 45px;">
+          <img src="/images/logos/logoquartz.png" alt="QUARTZ Logo" class="img-fluid footer-logo" style="height: 40px;">
+        </div>
       </div>
-  
-      <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="/laboratoires" class="nav-link p-0 text-body-secondary">Laboratoires</a></li>
-          <li class="nav-item mb-2"><a href="/equipe" class="nav-link p-0 text-body-secondary">Membres du projet</a></li>
+
+      <!-- Col 3: Quick Links -->
+      <div class="col-md-3">
+        <h5 class="text-uppercase small tracking-wider mb-3">{{ i18n "quick_links" }}</h5>
+        <ul class="nav flex-column gap-2">
+          <li class="nav-item">
+            <a href="{{ relLangURL `/` }}" class="nav-link p-0 text-muted hover-underline">{{ i18n "home" }}</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ relLangURL `/projet/` }}" class="nav-link p-0 text-muted hover-underline">{{ i18n "project" }}</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ relLangURL `/laboratoires/` }}" class="nav-link p-0 text-muted hover-underline">{{ i18n "laboratories" }}</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ relLangURL `/equipe/` }}" class="nav-link p-0 text-muted hover-underline">{{ i18n "team" }}</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ relLangURL `/publications/` }}" class="nav-link p-0 text-muted hover-underline">{{ i18n "publications" }}</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ relLangURL `/benchmark/` }}" class="nav-link p-0 text-muted hover-underline">{{ i18n "benchmark" }}</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ relLangURL `/suivi_projet/` }}" class="nav-link p-0 text-muted hover-underline">{{ i18n "followup" }}</a>
+          </li>
         </ul>
       </div>
-  
-      <div class="col mb-3">
-        
-      </div>
-  
-      <div class="col mb-3">
-        
-      </div>
-    </footer>
+    </div>
   </div>
+</footer>

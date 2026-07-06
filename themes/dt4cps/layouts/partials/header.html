@@ -1,25 +1,25 @@
-<nav class="navbar fixed-top navbar-expand-lg bg-secondary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">{{ site.Title }}</a>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="{{ relLangURL `/` }}">
+      <span class="me-2 raleway-200">ANR</span> <strong>DT4CPS</strong>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <nav>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-        </ul>
-      </nav>
-      <span class="navbar-text">
-        <select class="language-list" onchange="window.location.href=this.value">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
+        {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+      </ul>
+      <div class="d-flex align-items-center">
+        <select class="language-list shadow-sm" onchange="window.location.href=this.value">
           {{ range .Site.Home.AllTranslations }}
-         <option value="{{ .Permalink }}" {{ if eq $.Site.Language.Lang .Lang }}selected{{ end }}>
-          {{ .Language.LanguageName }}
+          <option value="{{ .Permalink }}" {{ if eq $.Site.Language.Lang .Lang }}selected{{ end }}>
+            {{ .Language.LanguageName }}
           </option>
           {{ end }}
-      </select>
-      </span>
+        </select>
+      </div>
     </div>
   </div>
 </nav>

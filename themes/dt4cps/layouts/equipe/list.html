@@ -1,24 +1,71 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ .Content }}
+<div class="row mb-5">
+  <div class="col-12">
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+    <div class="lead text-muted mb-4">{{ .Content }}</div>
+    {{ end }}
+    
+    <!-- Lab quick links / filter info -->
+    <div class="d-flex flex-wrap gap-2 align-items-center mb-4">
+      <span class="text-muted small me-2">{{ if eq .Site.Language.Lang "fr" }}Filtrer par laboratoire :{{ else }}Filter by laboratory:{{ end }}</span>
+      {{ range .Site.Taxonomies.labs.Alphabetical }}
+      <a href="{{ .Page.Permalink }}" class="btn btn-outline-primary btn-sm rounded-pill px-3">
+        {{ .Page.Title }} <span class="badge bg-secondary text-dark ms-1">{{ .Count }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
 
-<ul>
-  {{ range .Site.Taxonomies.labs.Alphabetical }}
-  <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
-  {{ end }}
-</ul>
-
-<div class="row">
-  {{ range $k, $v := .Pages }}
-  <div class="col-sm-12 col-md-4 gy-3">
-    <div class="card">
-      <h2 class="card-header"><a href="{{ .RelPermalink }}" class="text-primary">{{ .LinkTitle }}</a></h2>
-      <div class="card-body">
-        <div class="text-center">
-          <img class="img-fluid" style="height:300px" src="{{ .Params.image | relURL }}">
-          <p>{{ range $lab := .Params.labs }}{{ $lab }}{{ end }}</p>
-          <p>{{ range $wp := .Params.wps }}{{ $wp }}, {{ end }}</p>
-          <p>{{ .Params.role }}</p>
+<div class="row g-4">
+  {{ range .Pages }}
+  <div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="card h-100 text-center border-0 shadow-sm rounded-4 p-4 member-card">
+      <div class="mb-3">
+        {{ if .Params.image }}
+        <img class="rounded-circle member-avatar" src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+        {{ else if .Params.email }}
+        <img class="rounded-circle member-avatar" src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=140&d=identicon" alt="{{ .Title }}">
+        {{ else }}
+        <img class="rounded-circle member-avatar" src="/images/membres/no_photo.png" alt="{{ .Title }}">
+        {{ end }}
+      </div>
+      
+      <div class="card-body p-0 d-flex flex-column justify-content-between">
+        <div>
+          <h3 class="h6 fw-bold mb-1">
+            <a href="{{ .RelPermalink }}" class="text-dark text-decoration-none hover-primary">
+              {{ .Title }}
+            </a>
+          </h3>
+          {{ if .Params.role }}
+          <p class="text-muted small fw-semibold mb-3">{{ .Params.role }}</p>
+          {{ end }}
+        </div>
+        
+        <div>
+          <!-- Labs -->
+          {{ if .Params.labs }}
+          <div class="mb-2">
+            {{ range .Params.labs }}
+            <span class="badge-lab">{{ . }}</span>
+            {{ end }}
+          </div>
+          {{ end }}
+          
+          <!-- WPs -->
+          {{ if .Params.wps }}
+          <div class="mb-3">
+            {{ range .Params.wps }}
+            <span class="badge-wp">{{ . }}</span>
+            {{ end }}
+          </div>
+          {{ end }}
+          
+          <a href="{{ .RelPermalink }}" class="btn btn-outline-secondary btn-sm w-100 rounded-pill mt-2">
+            {{ if eq $.Site.Language.Lang "fr" }}Voir le profil{{ else }}View Profile{{ end }}
+          </a>
         </div>
       </div>
     </div>

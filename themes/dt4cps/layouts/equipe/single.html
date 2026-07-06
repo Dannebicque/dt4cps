@@ -1,40 +1,98 @@
 {{ define "main" }}
+<div class="row mb-4">
+  <div class="col-lg-10 mx-auto">
+    <!-- Back to team link -->
+    <a href="{{ relLangURL `/equipe/` }}" class="text-primary text-decoration-none small fw-semibold">
+      ← {{ if eq .Site.Language.Lang "fr" }}Retour aux membres{{ else }}Back to members{{ end }}
+    </a>
+  </div>
+</div>
 
-<section class="section section-bg">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-10 mx-auto">
-				<div class="title text-center">
-					<h2>{{ with i18n "aboutAuthor" }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
-							{{ with i18n "aboutAuthor" }} {{ index (split . " ") 1 | safeHTML }} {{ end }} </span></h2>
-					<div class="border-meghna"></div>
-				</div>
-				<div class="content text-center">
-					<figure>
-						{{ if .Params.image }}
-						<img class="rounded-circle img-fluid lozad" style="height:250px" src="{{ .Params.image | relURL }}">
-						{{else if .Params.email}}
-						<img class="rounded-circle img-fluid lozad"
-							src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=128&pg&d=identicon">
-						{{ end }}
-						<figcaption>
-							<h5 class="font-weight-bold">
-								{{ .Title }}
-							</h5>
-						</figcaption>
-					</figure>
-					<hr>
-					{{ .Content }}
-					<hr>
-					<ul class="list-inline">
-						{{ range .Params.Social }}
-						<li class="list-inline-item"><a class="simple-icon" href="{{ .link | safeURL}}"><i
-									class="{{ .icon }}"></i></a></li>
-						{{ end }}
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<div class="row">
+  <div class="col-lg-10 mx-auto">
+    <div class="row gy-4">
+      <!-- Profile Card (Left) -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 text-center">
+          <div class="mb-3">
+            {{ if .Params.image }}
+            <img class="rounded-circle member-avatar" src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+            {{ else if .Params.email }}
+            <img class="rounded-circle member-avatar" src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=140&d=identicon" alt="{{ .Title }}">
+            {{ else }}
+            <img class="rounded-circle member-avatar" src="/images/membres/no_photo.png" alt="{{ .Title }}">
+            {{ end }}
+          </div>
+          
+          <h2 class="h5 fw-bold text-dark mb-1">{{ .Title }}</h2>
+          {{ if .Params.status }}
+          <p class="text-muted small mb-2">{{ .Params.status }}</p>
+          {{ end }}
+          
+          {{ if .Params.role }}
+          <div class="my-3">
+            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-1 small fw-semibold">
+              {{ .Params.role }}
+            </span>
+          </div>
+          {{ end }}
+          
+          <hr class="w-100 my-3">
+          
+          <!-- Contact info -->
+          {{ if .Params.email }}
+          <a href="mailto:{{ .Params.email }}" class="btn btn-outline-primary btn-sm rounded-pill w-100 py-2">
+            {{ if eq .Site.Language.Lang "fr" }}Contacter par email{{ else }}Contact by Email{{ end }}
+          </a>
+          {{ end }}
+        </div>
+      </div>
+      
+      <!-- Bio & Projects (Right) -->
+      <div class="col-md-8">
+        <div class="card border-0 shadow-sm rounded-4 p-4">
+          <h3 class="h4 fw-bold text-primary mb-4 pb-2 border-bottom">
+            {{ if eq .Site.Language.Lang "fr" }}À propos{{ else }}About{{ end }}
+          </h3>
+          
+          <div class="content lh-lg text-dark mb-4 mt-0">
+            {{ if .Content }}
+              {{ .Content }}
+            {{ else }}
+              <p class="text-muted italic">
+                {{ if eq .Site.Language.Lang "fr" }}Aucune description disponible.{{ else }}No bio available.{{ end }}
+              </p>
+            {{ end }}
+          </div>
+          
+          <div class="row mt-4 pt-3 border-top">
+            <!-- Labs -->
+            {{ if .Params.labs }}
+            <div class="col-sm-6 mb-3">
+              <h4 class="h6 fw-bold text-dark mb-2">{{ if eq .Site.Language.Lang "fr" }}Laboratoire{{ else }}Laboratory{{ end }}</h4>
+              <div>
+                {{ range .Params.labs }}
+                <span class="badge-lab d-inline-block">{{ . }}</span>
+                {{ end }}
+              </div>
+            </div>
+            {{ end }}
+            
+            <!-- WPs -->
+            {{ if .Params.wps }}
+            <div class="col-sm-6 mb-3">
+              <h4 class="h6 fw-bold text-dark mb-2">Work Packages</h4>
+              <div>
+                {{ range .Params.wps }}
+                <span class="badge-wp">{{ . }}</span>
+                {{ end }}
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {{ end }}
